@@ -14,17 +14,20 @@
   height: auto;      /* يحافظ على النسبة */
 }
 
-    .social-icons0 a img {
+   .social-icons0 a img {
   width: 180px;   /* حجم كبير مناسب للكمبيوتر */
   height: 180px;
   transition: transform 0.3s ease;
+  animation: pulseGrowShrink 3s ease forwards;
 }
+
 .social-icons0 {
   display: flex;
   justify-content: center;  /* توسيط الأيقونات أفقياً */
   gap: 20px;                /* مسافة بين الأيقونات */
   flex-wrap: wrap;          /* يضمن أن الأيقونات تلتف للسطر التالي لو المساحة ضيقة */
 }
+
 /* ضبط الحجم على الشاشات المتوسطة */
 @media (max-width: 1024px) {
   .social-icons0 a img {
@@ -40,6 +43,40 @@
     height: 100px;
   }
 }
+
+/* أنيميشن نبض تكبير وتصغير */
+@keyframes pulseGrowShrink {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* تأخير متتابع لكل أيقونة */
+.social-icons0 a:nth-child(1) img {
+  animation-delay: 0s;
+}
+.social-icons0 a:nth-child(2) img {
+  animation-delay: 0.3s;
+}
+.social-icons0 a:nth-child(3) img {
+  animation-delay: 0.6s;
+}
+.social-icons0 a:nth-child(4) img {
+  animation-delay: 0.9s;
+}
+
 
 
   .contact-form {
