@@ -14,6 +14,28 @@
   height: auto;      /* يحافظ على النسبة */
 }
 
+    .social-icons0 a img {
+  width: 180px;   /* حجم كبير مناسب للكمبيوتر */
+  height: 180px;
+  transition: transform 0.3s ease;
+}
+
+/* ضبط الحجم على الشاشات المتوسطة */
+@media (max-width: 1024px) {
+  .social-icons0 a img {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+/* ضبط الحجم على الموبايلات */
+@media (max-width: 600px) {
+  .social-icons0 a img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 
   .contact-form {
     display: flex;
@@ -115,7 +137,7 @@
 
       <div class="contact-box">
         <h3>Click the icon to follow us:</h3>
-        <div class="social-icons">
+        <div class="social-icons0">
           <a href="https://www.facebook.com/share/16eGGFbvio/?mibextid=wwXIfr" target="_blank">
             <img src="assets/images/icona/face.png" alt="Facebook" />
           </a>
