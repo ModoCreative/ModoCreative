@@ -466,8 +466,8 @@ body {
   }
   
   .social-icons a img {
-    width: 90px;
-    height: 90px;
+    width: 180px;
+    height: 180px;
     transition: transform 0.3s ease;
   }
   
@@ -482,8 +482,8 @@ body {
     }
   
     .social-icons a img {
-      width: 100px;
-      height: 100px;
+      width: 200px;
+      height: 200px;
     }
   }
   .contact-form {
