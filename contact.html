@@ -19,7 +19,12 @@
   height: 180px;
   transition: transform 0.3s ease;
 }
-
+.social-icons0 {
+  display: flex;
+  justify-content: center;  /* توسيط الأيقونات أفقياً */
+  gap: 20px;                /* مسافة بين الأيقونات */
+  flex-wrap: wrap;          /* يضمن أن الأيقونات تلتف للسطر التالي لو المساحة ضيقة */
+}
 /* ضبط الحجم على الشاشات المتوسطة */
 @media (max-width: 1024px) {
   .social-icons0 a img {
