@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | MODO Creative</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="contact.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    img {
+      pointer-events: none;
+      -webkit-user-drag: none;
+    }
+  </style>
+  <script>
+    document.addEventListener("contextmenu", e => e.preventDefault());
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("img").forEach(img => {
+        img.setAttribute("draggable", "false");
+        img.setAttribute("oncontextmenu", "return false;");
+      });
+    });
+    document.addEventListener("touchstart", function preventLongPress(e) {
+      if (e.target.tagName === "IMG") {
+        e.preventDefault();
+      }
+    }, { passive: false });
+  </script>
+</head>
+
+<body>
+<div class="watermark-background"></div>
+
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-logo">
+          <img src="assets/images/lo modo.png" alt="MODO Creative" />
+        </div>
+        <ul class="navbar-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="designs.html">Designs</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="contact-section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>We would love to hear from you. Reach out to us via any method below!</p>
+
+      <div class="contact-info">
+        <p><strong>📞 Phone:</strong> <a href="tel:+201555646269">+20 155 564 6269</a></p>
+        <p><strong>📧 Email:</strong> <a href="mailto:modo.creative0@gmail.com">modo.creative0@gmail.com</a></p>
+      </div>
+      <div class="image-center">
+        <img src="assets/images/logif.gif" alt="Centered Image">
+      </div>
+
+      <div class="contact-box">
+        <h3>Click the icon to follow us:</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/share/16eGGFbvio/?mibextid=wwXIfr" target="_blank">
+            <img src="assets/images/icona/face.png" alt="Facebook" />
+          </a>
+          <a href="https://www.instagram.com/modo_creative0?igsh=M2hqMHB2MjNkNGJl&utm_source=qr" target="_blank">
+            <img src="assets/images/icona/insta.png" alt="Instagram" />
+          </a>
+          <a href="https://www.tiktok.com/@modocreative0?_t=ZS-8wjSsFSeYQJ&_r=1" target="_blank">
+            <img src="assets/images/icona/tiktok.png" alt="Tiktok" />
+          </a>
+          <a href="https://wa.me/01555646269" target="_blank">
+            <img src="assets/images/icona/WhatsApp.png" alt="WhatsApp" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <form action="https://formsubmit.co/modo.creative0@gmail.com" method="POST" class="contact-form">
+    <h2>Contact Form</h2>
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+    <div id="thankYouMessage" class="thank-you" style="display: none;">Thank you for contacting us! 🎉</div>
+  </form>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 MODO Creative. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
