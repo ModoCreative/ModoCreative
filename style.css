@@ -42,7 +42,7 @@
   }
   
   .hero {
-    background-image: url("assets/images/ccf.png");
+    background-image: url("assets/images/modocover.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -616,7 +616,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('assets/images/logo modo.png'); /* ← ضع هنا اسم صورة الخلفية */
+  background-image: url('assets/images/logonew.png'); /* ← ضع هنا اسم صورة الخلفية */
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
