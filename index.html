@@ -99,5 +99,16 @@
 
   <!-- Scripts -->
   <script src="script.js"></script>
+  <p style="font-size: 18px; font-weight: bold; color: #333;">
+  Visitors Count: <span id="visits"></span>
+</p>
+
+<script>
+  fetch('https://api.countapi.xyz/hit/modo.creative/visits')
+    .then(res => res.json())
+    .then(res => {
+      document.getElementById('visits').innerText = res.value;
+    });
+</script>
 </body>
 </html>
