@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Language Switch</title>
+   <style>
+    .lang-switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  direction: ltr; /* أضف هذا السطر */
+  background-color: #ddd;
+  border-radius: 999px;
+  width: 100px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  transition: background-color 0.3s;
+  z-index: 999;
+}
+
+    .lang-option {
+      flex: 1;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      z-index: 2;
+      color: #444;
+    }
+
+    .active {
+      color: white;
+    }
+
+    .slider {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 44px;
+      height: 30px;
+      border-radius: 999px;
+      background-color: #ff6600;
+      transition: left 0.3s ease;
+      z-index: 1;
+    }
+
+    .slider.ar {
+      left: 53px;
+    }
+
+    .slider.en {
+      left: 3px;
+    }
+  </style>
+ 
+
+ 
+
+
+
+  <link rel="icon" type="image/png" href="assets/images/logovf.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MODO Creative | Creativity Without Limits</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="lang-switch" onclick="toggleLang()">
+    <div class="slider" id="slider"></div>
+    <div id="enBtn" class="lang-option">EN</div>
+    <div id="arBtn" class="lang-option">AR</div>
+  </div>
+ <div class="watermark-background"></div>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-logo">
+          <img src="assets/images/logonew.png" alt="MODO Creative" />
+        </div>
+        <ul class="navbar-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="designs.html">Designs</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h2>MODO Creative</h2>
+      <h2>Creativity Without Limits</h2>
+      <p>"Building Brands That Live in Minds and Shine in Markets."</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About MODO</h2>
+      <p>
+        At MODO Creative, we don’t just design — we craft experiences. We believe every brand has a unique story waiting to be told with creativity, precision, and passion.
+        <br><br>
+        From logos and full brand identities to social media management and digital marketing strategies, we create tailored solutions that reflect who you are and connect you with your audience in meaningful ways.
+        <br><br>
+        Our team blends artistic vision with strategic thinking to deliver visuals that speak louder than words. Each project is a canvas, and we pour our energy into making it unforgettable.
+        <br><br>
+        MODO Creative – Creativity Without Limits.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <ul>
+        <li>🎨 Logo Design & Brand Identity</li>
+        <li>📱 Social Media Account Management</li>
+        <li>🎥 Promotional Video Production & Event Coverage</li>
+        <li>📸 Professional Photography Sessions</li>
+        <li>✂️ High-Quality Video Editing & Post-Production</li> 
+        <li>🖌️ Graphic Designs That Elevate Your Brand</li>               
+        <li>🧠 Marketing Strategy</li>
+        <li>📘 Flyer & Book Design</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2>Our Work</h2>
+      <div class="grid">
+
+        <div class="card"><img src="assets/images/po modo.png" alt="Social Post"></div>
+        <div class="card"><img src="assets/images/gifwork.gif" alt="Logo Design"></div>        
+        <div class="card"><img src="assets/images/muneww.png" alt="Flyer Design"></div>
+         <div class="card"><img src="assets/images/kef.gif" alt="Flyer Design"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Viewer -->
+  <div id="image-modal" class="image-modal">
+    <span class="close-btn" onclick="closeImageModal()">×</span>
+    <img class="modal-content" id="modal-img">
+  </div>
+<section id="offers" style="padding: 50px 20px; background-color: #f9f9f9;">
+  <h2 style="text-align: center; margin-bottom: 30px;">🎉 Eid El-Adha Offers 🎉</h2>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+
+    <!-- Social Media Management Plan 1 -->
+    <div style="width: 320px; text-align: center; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);">
+      <img src="assets/images/Media/BISC.png" alt="Basic Plan Image" style="width: 120px; margin-bottom: 15px;">
+      <h3 style="color: #2f6dff;">🟦 Basic Plan – 1990 EGP/month</h3>
+      <ul style="list-style: none; padding: 0; text-align: left; margin: 15px 0; font-size: 16px; color: #444;">
+        <li>🔹 4 design posts + captions</li>
+        <li>🔹 Monitoring comments & messages</li>
+        <li>🔹 15-day content plan</li>
+        <li style="color: #cc0000;">❌ No page posting</li>
+      </ul>
+    </div>
+
+    <!-- Social Media Management Plan 2 -->
+    <div style="width: 320px; text-align: center; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);">
+      <img src="assets/images/Media/GOLD.png" alt="Full Management Plan Image" style="width: 120px; margin-bottom: 15px;">
+      <h3 style="color: #8a2be2;">🟪 Full Management Plan – 2992 EGP/month</h3>
+      <ul style="list-style: none; padding: 0; text-align: left; margin: 15px 0; font-size: 16px; color: #444;">
+        <li>🔹 10 design posts + captions</li>
+        <li>🔹 Posting & content scheduling</li>
+        <li>🔹 Responding to comments & messages</li>
+        <li>🔹 Full content plan + monthly analysis</li>
+      </ul>
+    </div>
+
+    <!-- Design Package -->
+    <div style="width: 320px; text-align: center; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);">
+      <img src="assets/images/Media/Blue Modern Travel Facebook Cover (2).png" alt="Design Package Image" style="width: 120px; margin-bottom: 15px;">
+      <h3 style="color: #ff6600;">🎨 Design Package – 950 EGP only</h3>
+      <ul style="list-style: none; padding: 0; text-align: left; margin: 15px 0; font-size: 16px; color: #444;">
+        <li>🎨 A unique logo that represents you</li>
+        <li>💳 Business card proudly showing your name</li>
+        <li>📱 4 eye-catching social media posts</li>
+        <li>🖼️ Stylish cover photo for your page</li>
+        <li>🔁 Free revisions on all designs</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 MODO Creative. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <p style="font-size: 18px; font-weight: bold; color: #333;">
+  Visitors Count: <span id="visits"></span>
+</p>
+
+<script>
+  fetch('https://api.countapi.xyz/update/modo.creative/visits?amount=1')
+    .then(res => res.json())
+    .then(res => {
+      document.getElementById('visits').innerText = res.value;
+    });
+</script>
+ <script>
+    const currentPage = window.location.pathname;
+    const isArabic = currentPage.includes("indexar.html");
+
+    const enBtn = document.getElementById("enBtn");
+    const arBtn = document.getElementById("arBtn");
+    const slider = document.getElementById("slider");
+
+    if (isArabic) {
+      arBtn.classList.add("active");
+      slider.classList.add("ar");
+    } else {
+      enBtn.classList.add("active");
+      slider.classList.add("en");
+    }
+
+    function toggleLang() {
+      if (isArabic) {
+        window.location.href = "index.html";
+      } else {
+        window.location.href = "indexar.html";
+      }
+    }
+  </script>
+
+
+</body>
+</html>

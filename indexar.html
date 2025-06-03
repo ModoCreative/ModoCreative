@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    .lang-switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  direction: ltr; /* أضف هذا السطر */
+  background-color: #ddd;
+  border-radius: 999px;
+  width: 100px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  transition: background-color 0.3s;
+  z-index: 999;
+}
+
+    .lang-option {
+      flex: 1;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      z-index: 2;
+      color: #444;
+    }
+
+    .active {
+      color: white;
+    }
+
+    .slider {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 44px;
+      height: 30px;
+      border-radius: 999px;
+      background-color: #ff6600;
+      transition: left 0.3s ease;
+      z-index: 1;
+    }
+
+    .slider.ar {
+      left: 53px;
+    }
+
+    .slider.en {
+      left: 3px;
+    }
+  </style>
+
+<body>
+
+ <div class="lang-switch" onclick="toggleLang()">
+    <div class="slider" id="slider"></div>
+    <div id="enBtn" class="lang-option">EN</div>
+    <div id="arBtn" class="lang-option">AR</div>
+  </div>
+
+  <script>
+    const currentPage = window.location.pathname;
+    const isArabic = currentPage.includes("indexar.html");
+
+    const enBtn = document.getElementById("enBtn");
+    const arBtn = document.getElementById("arBtn");
+    const slider = document.getElementById("slider");
+
+    if (isArabic) {
+      arBtn.classList.add("active");
+      slider.classList.add("ar");
+    } else {
+      enBtn.classList.add("active");
+      slider.classList.add("en");
+    }
+
+    function toggleLang() {
+      if (isArabic) {
+        window.location.href = "index.html";
+      } else {
+        window.location.href = "indexar.html";
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MODO Creative | Creativity Without Limits</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+ <div class="watermark-background"></div>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-logo">
+          <img src="assets/images/logonew.png" alt="مودو كرييتيف" />
+        </div>
+        <ul class="navbar-links">
+          <li><a href="designar.html" class="active">الرئيسية</a></li>
+          <li><a href="designar.html">التصميمات</a></li>
+          <li><a href="mediaar.html">التسويق</a></li>
+          <li><a href="contactar.html">تواصل معنا</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h2>MODO Creative</h2>
+      <h2>إبداع بلا حدود</h2>
+      <p>"نبني علامات تجارية تعيش في الأذهان وتلمع في الأسواق."</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>عن MODO Creative</h2>
+      <p>
+        في MODO Creative، نحن لا نصمم فقط — نحن نصنع تجارب. نؤمن أن لكل علامة تجارية قصة فريدة تنتظر أن تُروى بإبداع ودقة وشغف.
+        <br><br>
+        من تصميم الشعارات وبناء الهوية البصرية الكاملة إلى إدارة حسابات التواصل الاجتماعي ووضع استراتيجيات التسويق الرقمي، نقدم حلولًا مخصصة تعكس هويتك وتربطك بجمهورك بطريقة فعالة.
+        <br><br>
+        يجمع فريقنا بين الرؤية الفنية والتفكير الاستراتيجي لنقدم أعمالًا مرئية تتحدث عنك أكثر من الكلمات. كل مشروع هو لوحة فنية نضع فيها كل طاقتنا لنخلق تجربة لا تُنسى.
+        <br><br>
+        MODO Creative – إبداع بلا حدود.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>خدماتنا</h2>
+      <ul>
+        <li>🎨 تصميم الشعارات وبناء الهوية البصرية</li>
+        <li>📱 إدارة حسابات السوشيال ميديا</li>
+        <li>🎥 تصوير الفيديوهات الترويجية وتغطية الفعاليات</li>
+        <li>📸 جلسات تصوير احترافية</li>
+        <li>✂️ مونتاج احترافي للفيديوهات</li> 
+        <li>🖌️ تصميمات جرافيك تبرز علامتك</li>               
+        <li>🧠 استراتيجيات تسويقية</li>
+        <li>📘 تصميم فلايرات وكتب</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2>أعمالنا</h2>
+      <div class="grid">
+        <div class="card"><img src="assets/images/po modo.png" alt="منشور سوشيال ميديا"></div>
+        <div class="card"><img src="assets/images/gifwork.gif" alt="تصميم لوجو"></div>        
+        <div class="card"><img src="assets/images/mu modo.png" alt="تصميم فلاير"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Viewer -->
+  <div id="image-modal" class="image-modal">
+    <span class="close-btn" onclick="closeImageModal()">×</span>
+    <img class="modal-content" id="modal-img">
+  </div>
+<section id="offers" style="padding: 50px 20px; background-color: #f9f9f9;">
+  <h2 style="text-align: center; margin-bottom: 30px;">🎉 عروض عيد الأضحى 🎉</h2>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+
+    <!-- خطة إدارة السوشيال ميديا 1 -->
+    <div style="width: 320px; text-align: center; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);">
+      <img src="assets/images/Media/BISC.png" alt="صورة الباقة الأساسية" style="width: 170px; margin-bottom: 15px; margin-left: auto; margin-right: auto; display: block;">
+      <h3 style="color: #2f6dff;">🟦 الباقة الأساسية – 1990 جنيه/شهريًا</h3>
+      <ul style="list-style: none; padding: 0; text-align: left; margin: 15px 0; font-size: 16px; color: #444;">
+        <li>🔹 4 منشورات تصميم + كتابة المحتوى</li>
+        <li>🔹 متابعة التعليقات والرسائل</li>
+        <li>🔹 خطة محتوى لمدة 15 يوم</li>
+        <li style="color: #cc0000;">❌ بدون نشر على الصفحة</li>
+      </ul>
+    </div>
+
+    <!-- خطة الإدارة الكاملة -->
+    <div style="width: 320px; text-align: center; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);">
+      <img src="assets/images/Media/GOLD.png" alt="صورة باقة الإدارة الكاملة" style="width: 170px; margin-bottom: 15px;  margin-left: auto; margin-right: auto; display: block;">
+      <h3 style="color: #8a2be2;">🟪 باقة الإدارة الكاملة – 2992 جنيه/شهريًا</h3>
+      <ul style="list-style: none; padding: 0; text-align: left; margin: 15px 0; font-size: 16px; color: #444;">
+        <li>🔹 10 منشورات تصميم + كتابة المحتوى</li>
+        <li>🔹 النشر وجدولة المحتوى</li>
+        <li>🔹 الرد على التعليقات والرسائل</li>
+        <li>🔹 خطة محتوى كاملة + تحليل شهري</li>
+      </ul>
+    </div>
+
+    <!-- باقة التصميم -->
+    <div style="width: 320px; text-align: center; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);">
+      <img src="assets/images/Media/Blue Modern Travel Facebook Cover (2).png" alt="صورة باقة التصميم" style="width: 230px; margin-bottom: 20%;  margin-left: auto; margin-right: auto; margin-top: 15%; display: block;">
+      <h3 style="color: #ff6600;">🎨 باقة التصميم – فقط 950 جنيه</h3>
+      <ul style="list-style: none; padding: 0; text-align: left; margin: 15px 0; font-size: 16px; color: #444;">
+        <li>🎨 شعار فريد يعبر عنك</li>
+        <li>💳 كارت شخصي يعكس هويتك</li>
+        <li>📱 4 منشورات جذابة للسوشيال ميديا</li>
+        <li>🖼️ صورة غلاف أنيقة لصفحتك</li>
+        <li>🔁 تعديلات مجانية على كل التصاميم</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy;   جميع الحقوق محفوظة  - Modo Creative  </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

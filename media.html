@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media - MODO Creative</title>
+  <link rel="icon" type="image/png" href="assets/images/logovf.png">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* الزر الخاص بتغيير اللغة */
+    .lang-switch {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #ddd;
+      border-radius: 999px;
+      width: 100px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5px;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      user-select: none;
+      transition: background-color 0.3s;
+      z-index: 999;
+    }
+
+    .lang-option {
+      flex: 1;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      z-index: 2;
+      color: #444;
+    }
+
+    .active {
+      color: white;
+    }
+
+    .slider {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 44px;
+      height: 30px;
+      border-radius: 999px;
+      background-color: #ff6600;
+      transition: left 0.3s ease;
+      z-index: 1;
+    }
+
+    .slider.ar {
+      left: 53px;
+    }
+
+    .slider.en {
+      left: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="lang-switch" onclick="toggleLang()">
+    <div class="slider" id="slider"></div>
+    <div id="enBtn" class="lang-option">EN</div>
+    <div id="arBtn" class="lang-option">AR</div>
+  </div>
+
+  <div class="watermark-background"></div>
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-logo">
+          <img src="assets/images/logonew.png" alt="MODO Creative" />
+        </div>
+        <ul class="navbar-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="designs.html">Designs</a></li>
+          <li><a href="media.html" class="active">Media</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Our Top Viral Posts – 100% Organic</h1>
+    <div class="gallery-container">
+      <div class="gallery-scroll">
+        <img src="assets/images/Media/1.png" alt="Design 1" />
+        <img src="assets/images/Media/2.png" alt="Design 2" />
+        <img src="assets/images/Media/3.png" alt="Design 3" />
+        <img src="assets/images/Media/4.png" alt="Design 4" />
+        <img src="assets/images/Media/5.png" alt="Design 5" />
+        <img src="assets/images/Media/6.png" alt="Design 6" />
+        <img src="assets/images/Media/101.png" alt="Design 7" />
+        <img src="assets/images/Media/404.png" alt="Design 8" />
+        <img src="assets/images/Media/303.png" alt="Design 9" />
+      </div>
+    </div>
+  </main>
+
+  <div id="image-modal" class="image-modal">
+    <span class="close-btn" onclick="closeImageModal()">×</span>
+    <img class="modal-content" id="modal-img">
+  </div>
+
+  <script>
+    const currentPage = window.location.pathname;
+    const isArabic = currentPage.includes("mediaar.html");
+
+    const enBtn = document.getElementById("enBtn");
+    const arBtn = document.getElementById("arBtn");
+    const slider = document.getElementById("slider");
+
+    if (isArabic) {
+      arBtn.classList.add("active");
+      slider.classList.add("ar");
+    } else {
+      enBtn.classList.add("active");
+      slider.classList.add("en");
+    }
+
+    function toggleLang() {
+      if (isArabic) {
+        window.location.href = "media.html";
+      } else {
+        window.location.href = "mediaar.html";
+      }
+    }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
